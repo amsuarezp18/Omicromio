@@ -2,6 +2,13 @@
 
 # Omicron `Al ritmo de la educación` 📝
 
+## URL video :video_camera:
+
+[Omicron YouTube Versión iOS. Lenguaje Inglés](https://www.youtube.com/watch?v=1HHJLVFL5mM&feature=youtu.be)
+
+## URL del sitio web
+[Omicron](https://omicromio.herokuapp.com/)
+
 Como consecuencia de la pandemia que se vive actualmente, los estudiantes pasaron de recibir clases presenciales a recibir clases virtuales. Uno de los mayores retos que enfrenta este cambio es la accesibilidad por parte de los estudiantes a los recursos educativos ya que muchos no tienen acceso a internet. Como solución temporal, los colegios optaron por ofrecer la posibilidad de dejar talleres en papelerías designadas para que los estudiantes los recogieran y solucionaran en sus casas, para posteriormente ser enviados al WhatsApp del profesor. Sin embargo, debido a esta nueva situación para el profesor es un proceso tedioso calificar los trabajos que provienen en imágenes de distintos chats. Por lo tanto, se desea facilitar y agilizar la organización de actividades para profesores que reciben sus talleres por WhatsApp.
 
 > ¡Esperamos disfrutes de las diferentes versiones de la plataforma que vamos a estar desplegando periódicamente!
