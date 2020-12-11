@@ -8,9 +8,9 @@ import Loading from "../loading/Loading";
 import { FormattedMessage } from "react-intl";
 
 export default function Curso() {
-  const [dataC] = useContext(AppContext);
+  const [data] = useContext(AppContext);
 
-  const url_cursos = "/omicron/cursos/teacher/" + dataC.userId;
+  const url_cursos = "/omicron/cursos/teacher/" + data.userId;
   const [cursos, setCursos] = useState(null);
 
   let loadingCourses = "Loading courses";

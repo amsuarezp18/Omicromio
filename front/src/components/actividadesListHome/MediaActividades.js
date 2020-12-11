@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import "./MediaActividades.css";
 import TareaImg from "../../assets/images/icons8-task-64.png";
 import { Link } from "react-router-dom";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, FormattedDate } from "react-intl";
 import axios from "axios";
 import { AppContext } from "../../context/AppContext";
 import Loading from "../loading/Loading";
@@ -132,7 +132,13 @@ export default function MediaActividades() {
               <FormattedMessage id="course" />: {proxA.nameCourse} -{" "}
               {proxA.name} - {proxA.nameSubject}
             </p>
-            <span className="mb-0">{proxA.submissionDate}</span>
+            <span className="mb-0"><FormattedDate
+                        value={new Date(proxA.submissionDate.split("T")[0])}
+                        year="numeric"
+                        month="short"
+                        day="numeric"
+                        weekday="long"
+                      /></span>
           </div>
         </Link>
       </li>

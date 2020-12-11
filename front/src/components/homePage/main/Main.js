@@ -99,7 +99,7 @@ export default function Main() {
                       currency={currency}
                     />
                   </span>
-                  &nbsp;
+                  <br />
                   <span className={styles.value_price_Home_Page_free}>
                     <FormattedMessage id="landing.main.plans.free.title" />
                   </span>
@@ -124,7 +124,7 @@ export default function Main() {
                       currency={currency}
                     />
                   </span>
-                  &nbsp;
+                  <br />
                   <span className={styles.value_price_Home_Page_free}>
                     <FormattedMessage id="landing.main.plans.free.title" />
                   </span>

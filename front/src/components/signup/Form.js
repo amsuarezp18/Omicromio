@@ -9,6 +9,33 @@ export default function Form({ submitForm }) {
     submitForm,
     validate,
   );
+  let roleTeacher = "Teacher";
+  let roleStdent = "Student";
+  let rolePrincipal = "Principal";
+  let enterUsername = "Enter username"
+  let enterFName = "Enter Fisrt name"
+  let enterSName = "Enter Second name"
+  let enterLName = "Enter Last name"
+  let enterEmail = "Enter email"
+  let enterSchool = "Enter school"
+  let enterPhone = "Enter phone number"
+  let enterPassword = "Enter password"
+  let enterConfirm = "Confirm your password"
+
+  if (navigator.language.startsWith("es")) {
+    roleTeacher = "Profesor";
+    roleStdent = "Estudiante";
+    rolePrincipal = "Rector";
+    enterUsername = "Ingresa usuario"
+    enterFName = "Ingresa primer nombre"
+    enterSName = "Ingresa segundo nombre"
+    enterLName = "Ingresa apellido"
+    enterEmail = "Ingresa email"
+    enterSchool = "Ingresa colegio"
+    enterPhone = "Ingresa celular"
+    enterPassword = "Ingresa contraseña"
+    enterConfirm = "Confirma contraseña"
+  }
 
   return (
     <div className="section-as-signup">
@@ -20,13 +47,13 @@ export default function Form({ submitForm }) {
                 <div className="form-inputs-up">
                   {/* Username */}
                   <label htmlFor="username" className="form-label">
-                    Username
+                    <FormattedMessage id="login.main.username" />
                   </label>
                   <input
                     className="form-input-up"
                     type="text"
                     name="username"
-                    placeholder="Enter username"
+                    placeholder={enterUsername}
                     value={values.username}
                     onChange={handleChange}
                     id="username"
@@ -37,13 +64,13 @@ export default function Form({ submitForm }) {
                 {/* First name */}
                 <div className="form-inputs-up">
                   <label htmlFor="firstName" className="form-label">
-                    First Name
+                    <FormattedMessage id="sign.up.first.name" />
                   </label>
                   <input
                     className="form-input-up"
                     type="text"
                     name="firstName"
-                    placeholder="Enter First name"
+                    placeholder={enterFName}
                     value={values.firstName}
                     onChange={handleChange}
                     id="firstName"
@@ -54,13 +81,13 @@ export default function Form({ submitForm }) {
                 {/* Second name */}
                 <div className="form-inputs-up">
                   <label htmlFor="secondName" className="form-label">
-                    Second Name
+                    <FormattedMessage id="sign.up.second.name" />
                   </label>
                   <input
                     className="form-input-up"
                     type="text"
                     name="secondName"
-                    placeholder="Enter Second name"
+                    placeholder={enterSName}
                     value={values.secondName}
                     onChange={handleChange}
                     id="secondName"
@@ -71,13 +98,13 @@ export default function Form({ submitForm }) {
                 {/* Last name */}
                 <div className="form-inputs-up">
                   <label htmlFor="lastName" className="form-label">
-                    Last Name
+                    <FormattedMessage id="sign.up.last.name" />
                   </label>
                   <input
                     className="form-input-up"
                     type="text"
                     name="lastName"
-                    placeholder="Enter Last name"
+                    placeholder={enterLName}
                     value={values.lastName}
                     onChange={handleChange}
                     id="lastName"
@@ -88,13 +115,13 @@ export default function Form({ submitForm }) {
                 {/* Email */}
                 <div className="form-inputs-up">
                   <label htmlFor="email" className="form-label">
-                    Email
+                    <FormattedMessage id="sign.up.email" />
                   </label>
                   <input
                     className="form-input-up"
                     type="email"
                     name="email"
-                    placeholder="Enter email"
+                    placeholder={enterEmail}
                     value={values.email}
                     onChange={handleChange}
                     id="email"
@@ -106,13 +133,13 @@ export default function Form({ submitForm }) {
                 {/* School */}
                 <div className="form-inputs-up">
                   <label htmlFor="school" className="form-label">
-                    School
+                    <FormattedMessage id="sign.up.school" />
                   </label>
                   <input
                     className="form-input-up"
                     type="text"
                     name="school"
-                    placeholder="Enter school"
+                    placeholder={enterSchool}
                     value={values.school}
                     onChange={handleChange}
                     id="school"
@@ -122,24 +149,24 @@ export default function Form({ submitForm }) {
 
                 <div className="form-inputs-up">
                   <label htmlFor="rol" className="form-label">
-                    Rol
+                    <FormattedMessage id="sign.up.role" />
                   </label>
                   <select className="width-role" name="rol" id="rol">
-                    <option value="profesor">Profesor</option>
-                    <option value="estudiante">Estudiante</option>
-                    <option value="rector">Rector</option>
+                    <option value="profesor">{roleTeacher}</option>
+                    <option value="estudiante">{roleStdent}</option>
+                    <option value="rector">{rolePrincipal}</option>
                   </select>
                 </div>
 
                 <div className="form-inputs-up">
                   <label htmlFor="phone" className="form-label">
-                    Celular
+                    <FormattedMessage id="sign.up.cellphone" />
                   </label>
                   <input
                     className="form-input-up"
                     type="text"
                     name="phone"
-                    placeholder="Enter Phone"
+                    placeholder={enterPhone}
                     value={values.phone}
                     onChange={handleChange}
                     id="phone"
@@ -150,13 +177,13 @@ export default function Form({ submitForm }) {
                 {/* Password 1 */}
                 <div className="form-inputs-up">
                   <label htmlFor="password" className="form-label">
-                    Password
+                    <FormattedMessage id="login.main.password" />
                   </label>
                   <input
                     className="form-input-up"
                     type="password"
                     name="password"
-                    placeholder="Enter password"
+                    placeholder={enterPassword}
                     value={values.password}
                     onChange={handleChange}
                     id="password"
@@ -166,13 +193,13 @@ export default function Form({ submitForm }) {
                 {/* Password 2 */}
                 <div className="form-inputs-up">
                   <label htmlFor="password2" className="form-label">
-                    Confirm password
+                    <FormattedMessage id="sign.up.confirm.pass" />
                   </label>
                   <input
                     className="form-input-up"
                     type="password"
                     name="password2"
-                    placeholder="Confirm your password"
+                    placeholder={enterConfirm}
                     value={values.password2}
                     onChange={handleChange}
                     id="password2"

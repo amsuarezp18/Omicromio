@@ -8,6 +8,7 @@ import Box from "@material-ui/core/Box";
 import axios from "axios";
 import { AppContext } from "../../context/AppContext";
 import { FormattedMessage } from "react-intl";
+import RatingStar from "../rating/RatingStar";
 
 export default function Home(props) {
   //
@@ -136,27 +137,6 @@ export default function Home(props) {
               <div className="col"></div>
               <div className="col-md-5 col-xl-6 col-12">
                 <div className="row no-gutters pink">
-                  <h2 className="mx-auto">
-                    <FormattedMessage id="home.develop.function" />
-                  </h2>
-                  <hr className="hr-nocolor" />
-                  <h3 className="mx-auto">
-                    <FormattedMessage id="home.profile" />
-                  </h3>
-                  <hr className="hr-nocolor" />
-                  <div className="profile mx-auto">
-                    <div className="card cardProfile">
-                      <div className="firstinfo" id="beforeProfileImage">
-                        <img
-                          src={userImg}
-                          id="imgProfile"
-                          alt="Imagen perfil"
-                        />
-                        <div className="profileinfo"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr className="hr-nocolor" />
                   <h3 className="mx-auto">
                     <FormattedMessage id="home.rate" />
                   </h3>
@@ -173,6 +153,32 @@ export default function Home(props) {
                         }}
                       />
                     </Box>
+                  </div>
+
+                  <hr className="hr-nocolor" />
+                  <div className="mx-auto">
+                    {userData != null ? (
+                      <RatingStar categoria={userData.role} />
+                    ) : (
+                      <RatingStar categoria="teacher" />
+                    )}
+                  </div>
+                  <hr className="hr-nocolor" />
+                  <h3 className="mx-auto">
+                    <FormattedMessage id="home.profile" />
+                  </h3>
+                  <hr className="hr-nocolor" />
+                  <div className="profile mx-auto">
+                    <div className="card cardProfile">
+                      <div className="firstinfo" id="beforeProfileImage">
+                        <img
+                          src={userImg}
+                          id="imgProfile"
+                          alt="Imagen perfil"
+                        />
+                        <div className="profileinfo"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
