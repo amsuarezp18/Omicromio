@@ -68,7 +68,10 @@ export default function NavBar(props) {
         } else {
           setGroups(dataGroups);
         }
-        sessionStorage.setItem("Groups", JSON.stringify(dataGroups));
+        sessionStorage.setItem(
+          "Groups",
+          JSON.stringify(dataGroups.slice(0, 5)),
+        );
       });
     }
   }, [url, url_cursos]);

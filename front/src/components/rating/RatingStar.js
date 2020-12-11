@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Chart from "react-google-charts";
 import axios from "axios";
-import Loading from "../loading/Loading";
 
 export default function RatingStar(props) {
   let categoria = props.categoria;
@@ -30,7 +29,7 @@ export default function RatingStar(props) {
 
   const [dataRating, setDataRating] = useState(data);
 
-  let content = <Loading texto={loadingStars}></Loading>;
+  let content = <></>;
 
   if (dataRating) {
     console.log(dataRating);

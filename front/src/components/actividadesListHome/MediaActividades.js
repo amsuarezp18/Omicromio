@@ -64,7 +64,7 @@ export default function MediaActividades() {
         }
         sessionStorage.setItem(
           "ActividadesProx",
-          JSON.stringify(dataProxActivities),
+          JSON.stringify(dataProxActivities.slice(0, 5)),
         );
       });
     }
@@ -104,7 +104,7 @@ export default function MediaActividades() {
   }
 
   let content = <Loading texto={loadingNextActivities}></Loading>;
-  
+
   if (proxActividades) {
     content = proxActividades.map((proxA, index) => (
       <li className="media mb-4 d-flex mediaActivities" key={index}>
@@ -132,13 +132,15 @@ export default function MediaActividades() {
               <FormattedMessage id="course" />: {proxA.nameCourse} -{" "}
               {proxA.name} - {proxA.nameSubject}
             </p>
-            <span className="mb-0"><FormattedDate
-                        value={new Date(proxA.submissionDate.split("T")[0])}
-                        year="numeric"
-                        month="short"
-                        day="numeric"
-                        weekday="long"
-                      /></span>
+            <span className="mb-0">
+              <FormattedDate
+                value={new Date(proxA.submissionDate.split("T")[0])}
+                year="numeric"
+                month="short"
+                day="numeric"
+                weekday="long"
+              />
+            </span>
           </div>
         </Link>
       </li>
