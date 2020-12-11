@@ -29,7 +29,6 @@ export default function NavBar(props) {
     if (!navigator.onLine) {
       if (sessionStorage.getItem("UserData") === "") {
         setUserData(loadingNextActivities);
-      
       } else {
         setUserData(JSON.parse(sessionStorage.getItem("UserData")));
       }
@@ -64,8 +63,8 @@ export default function NavBar(props) {
             }
           }
         });
-        if (dataGroups.length > 8) {
-          setGroups(dataGroups.slice(0, 8));
+        if (dataGroups.length > 5) {
+          setGroups(dataGroups.slice(0, 5));
         } else {
           setGroups(dataGroups);
         }
