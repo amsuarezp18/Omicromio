@@ -256,7 +256,9 @@ export default function Estadisticas() {
                 </h1>
                 <hr />
                 <div className={!navigator.onLine ? "show-stat" : "hide-stat"}>
-                  <h3>No se puede mostrar esta información en modo offline </h3>
+                  <h3>
+                    <FormattedMessage id="statistics.notAvailable" />
+                  </h3>
                 </div>
                 <div className={!navigator.onLine ? "hide-stat" : "show-stat"}>
                   <div className="row text-center">
